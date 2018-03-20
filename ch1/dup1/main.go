@@ -17,7 +17,7 @@ import (
 func main() {
 	counts := make(map[string]int)
 	input := bufio.NewScanner(os.Stdin)
-	for input.Scan() {
+	for input.Scan() {//input.Scan()读取不到数据后返回false，此时for循环结束
 		counts[input.Text()]++
 	}
 	// NOTE: ignoring potential errors from input.Err()
